@@ -8,8 +8,10 @@ Rails.application.routes.draw do
 
 	match 'list' => 'mail#list', :via => [:get, :post]
 
-	match 'destroy/:id' => 'mail#destroy', :via => [:get, :post]
+	match '/destroy/:id' => 'mail#destroy', :via => [:get, :post]
 
-	root 'mail#menu'
+	root 'mail#list'
+
+	resources :mail
 
 end
