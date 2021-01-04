@@ -12,4 +12,6 @@ Rails.application.routes.draw do
 
 	root 'mail#menu'
 
+	resources :mail
+
 end
