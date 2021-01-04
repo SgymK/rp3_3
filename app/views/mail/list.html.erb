@@ -1,0 +1,12 @@
+<body>
+ <h1>自動返信リスト</h1>
+  <% @replies.each do |reply| %>
+  [<%= reply.name %>]<br>
+  キーワード：「<%= reply.keyward %>」<br>
+  件名：「<%= reply.subject %>」<br>
+  本文：「<%= reply.text %>」<br>
+  <%= link_to"削除", "http://localhost:3000/destroy/#{reply.id}" %><br>
+  <p>------------------------------</p>
+  <% end %>
+  <%= link_to"メニュー", "http://localhost:3000/menu" %>
+</body>

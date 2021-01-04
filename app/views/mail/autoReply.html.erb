@@ -1,0 +1,24 @@
+<body>
+ <h1>自動返信設定</h1>
+  <%= form_for @reply, url: { action: 'complete' } do |f| %>
+   <p>
+    <%= f.label :name, "自動返信名" %><br>
+    <%= f.text_field :name %>
+   </p>
+   <p>
+    <%= f.label :keyward, "キーワード" %><br>
+    <%= f.text_field :keyward %>
+   </p>
+   <p>----------------------------------------</p>
+   <p>
+    <%= f.label :subject, "件名" %><br>
+    <%= f.text_field :subject %>
+   </p>
+   <p>
+    <%= f.label :text, "本文" %><br>
+    <%= f.text_area :text %>
+   </p>
+   <%= f.submit "登録" %>
+  <% end %>
+  <%= link_to"戻る", "http://localhost:3000/menu" %>
+</body>
