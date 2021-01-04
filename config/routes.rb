@@ -10,4 +10,6 @@ Rails.application.routes.draw do
 
 	match 'destroy/:id' => 'mail#destroy', :via => [:get, :post]
 
+	root 'application#menu'
+
 end
